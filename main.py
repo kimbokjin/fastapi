@@ -1,17 +1,18 @@
 from fastapi import FastAPI, Request, Response
 from fastapi.responses import HTMLResponse
 from fastapi.staticfiles import StaticFiles
-
 from fastapi.templating import Jinja2Templates
-
+import subprocess
 
 app = FastAPI()
 
-app.mount("/static", StaticFiles(directory="C:\\Users\\Admin\\Desktop\\fastapi\\static"), name="static")
+dir = "/home/bokjin/fastapi"
+app.mount(
+    "/static", StaticFiles(directory=f"{dir}/static"), name="static")
 
 
 templates = Jinja2Templates(
-    directory="C:\\Users\\Admin\\Desktop\\fastapi\\static\\templates")
+    directory=f"{dir}/static/templates")
 
 
 @app.get("/", response_class=HTMLResponse)
