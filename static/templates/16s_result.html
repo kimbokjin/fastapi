@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet"></link>
+  <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+  <style>
+    section{
+      display:grid;
+      gap : 80px;
+      
+  
+    }
+    section >div{
+      height : 700px;
+      padding : 20px;
+      width: 900px;
+      border-bottom: 2px solid #e9e9e9;
+    }
+    p {
+      word-break:break-all;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1><a href ="/">Galaxy Environment</a></h1>
+    <h3>{{target}} Result</h3>
+    <h4><a href = "/16s_export" download>Export to CSV</a></h4>
+    <h5><a href ="/"> ← Go back</a>
+  </header>
+  <section>
+    {% for result in results %}
+    
+    <div class = "16s_result_box">
+        <h3>{{result.name}}</h3><br>
+        <p>{{result.sequence}}</p><br>
+    </div>
+    {% endfor %}
+  </section> 
+</body>
+
+</html>

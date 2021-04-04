@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galaxy Environment</title>
+    <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+  </head>
+  <body class = "accession_body">
+    <header>
+      <h1>Search Accession Number</h1>
+      <h5><a href ="/"> ← Go back</a>
+    </header>
+    <div class = "accession_div">
+      <label for="avatar">Choose outgroup and a file:</label>
+      <form action="/uploadfiles" enctype="multipart/form-data" method="post">
+      <div>
+        <input name="outgroup" placeholder="i.e Marinobacter lutaoensis" type="text" />
+      </div>
+      <div>
+        <input name="files" type="file" multiple required/>
+      </div>
+      <div class = "data_submit">
+        <input type="submit">
+      </div>  
+    </div>
+    </form>
+    
+  </body>
+</html>

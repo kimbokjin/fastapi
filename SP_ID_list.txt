@@ -1,0 +1,5 @@
+SP_NAME,ID
+Pseudoalteromonas distincta,GCF_000814675.1
+Pseudoalteromonas elyakovii,GCA_000814665.1
+Pseudoalteromonas arctica,GCF_000238395.3
+Marinobacter lutaoensis,GCF_001981305.1

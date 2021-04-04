@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+    Search 16S rRNA
+  </title>
+  <link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+  <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <h1>Search 16S rRNA</h1>
+    <h5><a href ="/"> ← Go back</a>
+  </header>
+  <main>
+    <form action="/search_16s_rRNA/" enctype="multipart/form-data" method="get">
+      <h4>Browse By:</h4>
+      
+      <select name="option" id="option-select">
+        <option value="">--Please choose an option--</option>
+        <option value="family">Family</option>
+        <option value="genus">Genus</option>
+        <option value="specise">Specise</option>
+      </select>
+       
+      <input type="text" placeholder="i.e Leeuwenhoekiella or Pseudomonas pelagia" size="40" name = "target" required />
+      <button type="submit">Search</button>
+    </form>
+  </main>
+
+
+</body>
+</html>

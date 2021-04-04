@@ -1,7 +1,3 @@
-form {
-  margin-top: 50px;
-}
-
 .sidenav {
   height: 100%;
   width: 160px;
@@ -39,4 +35,8 @@ form {
   .sidenav a {
     font-size: 18px;
   }
+}
+
+.sidenav > a {
+  margin-bottom: 15px;
 }

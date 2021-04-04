@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Galaxy Environment</title>
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet"/>
+  </head>
+  <body class ="main_body">
+    <h1><a href ="/">Galaxy Environment</a></h1>
+    <div class="sidenav">
+      <a href="/search16S">Search<br>16S rRNA</a>
+      <a href="/accession">Search<br>Accession<br>Number</a>
+      <a href="/ngs">NGS</a>
+      <a href="/ont">ONT</a>
+    </div>    
+    <div class = "main">
+      
+    </div>
+    <div class = btn_box>
+      <div class = "box_one">
+      <form action="/search16S">
+        <button class = "main_btn"> SEARCH 16S rRNA</button>
+      </form>
+      <form action="/ngs">
+        <button class = "main_btn">NGS</button>
+      </form>
+    </div>
+    <div class = "box_two">
+      <form action="/accession">
+        <button class = "main_btn" width="150"> SEARCH Accession Number</button>
+      </form>
+      <form action="/ont">
+        <button class = "main_btn"> ONT</button>>
+      </form>
+    </div>  
+    </div>  
+  </body>
+</html>
